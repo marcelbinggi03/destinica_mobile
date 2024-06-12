@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_app/pages/register.dart';
 
 class LogIn extends StatelessWidget {
   @override
@@ -155,7 +156,10 @@ class LogIn extends StatelessWidget {
                           child: GestureDetector(
                             onTap: () {
                               // Handle sign up link tap
-                              print("Sign Up link tapped");
+                               Navigator.push(
+                                    context,
+                                    MaterialPageRoute(builder: (context) => Register()),
+                                  );
                             },
                             child: RichText(
                               text: TextSpan(

@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+/*import 'package:flutter/material.dart';
 import 'dart:ui';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_app/utils.dart';
@@ -171,6 +171,30 @@ class ReadArticle extends StatelessWidget {
             ),
           ],
         ),
+      ),
+    );
+  }
+}*/
+
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+class ReadArticle extends StatelessWidget {
+  final String title;
+  final String content;
+
+  ReadArticle({required this.title, required this.content});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(title, style: GoogleFonts.poppins()),
+        backgroundColor: Color(0xFF10160A),
+      ),
+      body: Padding(
+        padding: EdgeInsets.all(16.0),
+        child: Text(content, style: GoogleFonts.poppins(fontSize: 16)),
       ),
     );
   }
