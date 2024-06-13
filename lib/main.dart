@@ -21,7 +21,7 @@ import 'package:flutter_app/pages/review.dart';
 import 'package:flutter_app/pages/schedule.dart';
 import 'package:flutter_app/pages/search.dart';
 import 'package:flutter_app/pages/welcome_page.dart';
-
+import 'package:flutter_app/pages/add_destination.dart';
 
 void main() => runApp(const MyApp());
 
@@ -40,7 +40,7 @@ class MyApp extends StatelessWidget {
         // body: Article(),
         // body: Destination(),
         // body: EditProfile(),
-        body: GetStarted(),
+        // body: GetStarted(),
         // body: Home(),
         // body: LogIn(),
         // body: MyReview(),
@@ -55,6 +55,7 @@ class MyApp extends StatelessWidget {
         // body: Schedule(),
         // body: Search(),
         // body: WelcomePage(),
+        body: AddDestination(),
 
       ),
     );
