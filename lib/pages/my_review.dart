@@ -11,7 +11,9 @@ class MyReview extends StatelessWidget {
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => ReadMoreReview(title: title, content: content),
+        builder: (context) => ReadMoreReview(
+          data: {},
+        ),
       ),
     );
   }
@@ -74,7 +76,8 @@ class MyReview extends StatelessWidget {
                     top: 8,
                     right: 8,
                     child: Container(
-                      margin: EdgeInsets.only(top: 10, right: 10), // Adjust margin as needed
+                      margin: EdgeInsets.only(
+                          top: 10, right: 10), // Adjust margin as needed
                       child: PopupMenuButton<String>(
                         offset: Offset(0, 50),
                         onSelected: handleMenuItemClick,
@@ -151,7 +154,8 @@ class MyReview extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => AddDestination(), // Replace with your upload page
+                  builder: (context) =>
+                      AddDestination(), // Replace with your upload page
                 ),
               );
             },

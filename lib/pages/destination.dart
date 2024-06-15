@@ -7,8 +7,7 @@ import 'package:google_fonts/google_fonts.dart';
 class Destination extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return 
-    Container(
+    return Container(
       decoration: BoxDecoration(
         color: Color(0xFF10160A),
         borderRadius: BorderRadius.circular(30),
@@ -33,7 +32,7 @@ class Destination extends StatelessWidget {
               ),
             ),
           ),
-    Container(
+          Container(
             padding: EdgeInsets.fromLTRB(0, 10.4, 0, 0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -174,7 +173,8 @@ class Destination extends StatelessWidget {
                               Container(
                                 margin: EdgeInsets.fromLTRB(0, 0, 0, 0.3),
                                 child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
@@ -211,7 +211,8 @@ class Destination extends StatelessWidget {
                                     width: 12,
                                     height: 13.3,
                                     child: Container(
-                                      padding: EdgeInsets.fromLTRB(4, 4, 4, 5.3),
+                                      padding:
+                                          EdgeInsets.fromLTRB(4, 4, 4, 5.3),
                                       child: Stack(
                                         clipBehavior: Clip.none,
                                         children: [
@@ -238,15 +239,18 @@ class Destination extends StatelessWidget {
                               Container(
                                 margin: EdgeInsets.fromLTRB(7, 0, 17.2, 21),
                                 child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Expanded(
                                       child: Container(
-                                        margin: EdgeInsets.fromLTRB(0, 3, 26, 0),
+                                        margin:
+                                            EdgeInsets.fromLTRB(0, 3, 26, 0),
                                         child: Container(
                                           decoration: BoxDecoration(
-                                            borderRadius: BorderRadius.circular(10),
+                                            borderRadius:
+                                                BorderRadius.circular(10),
                                             image: DecorationImage(
                                               fit: BoxFit.cover,
                                               image: AssetImage(
@@ -262,10 +266,12 @@ class Destination extends StatelessWidget {
                                     ),
                                     Expanded(
                                       child: Container(
-                                        margin: EdgeInsets.fromLTRB(0, 0, 26, 3),
+                                        margin:
+                                            EdgeInsets.fromLTRB(0, 0, 26, 3),
                                         child: Container(
                                           decoration: BoxDecoration(
-                                            borderRadius: BorderRadius.circular(10),
+                                            borderRadius:
+                                                BorderRadius.circular(10),
                                             image: DecorationImage(
                                               fit: BoxFit.cover,
                                               image: AssetImage(
@@ -281,10 +287,12 @@ class Destination extends StatelessWidget {
                                     ),
                                     Expanded(
                                       child: Container(
-                                        margin: EdgeInsets.fromLTRB(0, 0, 26, 3),
+                                        margin:
+                                            EdgeInsets.fromLTRB(0, 0, 26, 3),
                                         child: Container(
                                           decoration: BoxDecoration(
-                                            borderRadius: BorderRadius.circular(10),
+                                            borderRadius:
+                                                BorderRadius.circular(10),
                                             image: DecorationImage(
                                               fit: BoxFit.cover,
                                               image: AssetImage(
@@ -300,10 +308,12 @@ class Destination extends StatelessWidget {
                                     ),
                                     Expanded(
                                       child: Container(
-                                        margin: EdgeInsets.fromLTRB(0, 0, 26, 3),
+                                        margin:
+                                            EdgeInsets.fromLTRB(0, 0, 26, 3),
                                         child: Container(
                                           decoration: BoxDecoration(
-                                            borderRadius: BorderRadius.circular(10),
+                                            borderRadius:
+                                                BorderRadius.circular(10),
                                             image: DecorationImage(
                                               fit: BoxFit.cover,
                                               image: AssetImage(
@@ -322,7 +332,8 @@ class Destination extends StatelessWidget {
                                         margin: EdgeInsets.fromLTRB(0, 3, 0, 0),
                                         child: Container(
                                           decoration: BoxDecoration(
-                                            borderRadius: BorderRadius.circular(10),
+                                            borderRadius:
+                                                BorderRadius.circular(10),
                                             image: DecorationImage(
                                               fit: BoxFit.cover,
                                               image: AssetImage(
@@ -331,7 +342,8 @@ class Destination extends StatelessWidget {
                                             ),
                                           ),
                                           child: Container(
-                                            padding: EdgeInsets.fromLTRB(10.6, 17, 15.6, 11),
+                                            padding: EdgeInsets.fromLTRB(
+                                                10.6, 17, 15.6, 11),
                                             child: Text(
                                               '+13',
                                               style: GoogleFonts.getFont(
@@ -355,7 +367,8 @@ class Destination extends StatelessWidget {
                                   alignment: Alignment.topLeft,
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.start,
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     children: [
                                       Container(
                                         margin: EdgeInsets.fromLTRB(0, 0, 0, 8),

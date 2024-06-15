@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/pages/home.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_app/pages/register.dart';
@@ -14,7 +15,8 @@ class LogIn extends StatelessWidget {
         ),
         child: SingleChildScrollView(
           child: Container(
-            padding: EdgeInsets.fromLTRB(26.2, 50.4, 14, 14),  // Adjust padding to start below the status bar
+            padding: EdgeInsets.fromLTRB(26.2, 50.4, 14,
+                14), // Adjust padding to start below the status bar
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -130,7 +132,11 @@ class LogIn extends StatelessWidget {
                         child: GestureDetector(
                           onTap: () {
                             // Handle sign in button tap
-                            print("Sign In button tapped");
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => Home(),
+                                ));
                           },
                           child: Container(
                             width: 340,
@@ -156,10 +162,11 @@ class LogIn extends StatelessWidget {
                           child: GestureDetector(
                             onTap: () {
                               // Handle sign up link tap
-                               Navigator.push(
-                                    context,
-                                    MaterialPageRoute(builder: (context) => Register()),
-                                  );
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => Register()),
+                              );
                             },
                             child: RichText(
                               text: TextSpan(

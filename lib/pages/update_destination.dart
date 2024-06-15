@@ -4,14 +4,18 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 
-class AddDestination extends StatelessWidget {
-  late DateTime selectDate;
-  late String destination;
-  late String description;
-  late String location;
+class UpdateDestination extends StatelessWidget {
+  UpdateDestination({required this.snapshot});
+
+  final Map<String, dynamic> snapshot;
 
   @override
   Widget build(BuildContext context) {
+    DateTime selectDate = DateFormat('yyyy-MM-dd').parse(snapshot['tanggal']);
+    String destination = snapshot['nama_destinasi'];
+    String description = snapshot['deskripsi'];
+    String location = snapshot['lokasi'];
+
     return Scaffold(
       backgroundColor: Color(0xFF10160A),
       body: SingleChildScrollView(
@@ -27,179 +31,29 @@ class AddDestination extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Container(
-                  margin: EdgeInsets.fromLTRB(26.2, 0, 10.8, 42.6),
+                  width: MediaQuery.of(context).size.width,
+                  height: 200,
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Stack(
-                        children: [
-                          Text(
-                            '9:27',
-                            style: GoogleFonts.getFont(
-                              'Roboto Condensed',
-                              fontWeight: FontWeight.w600,
-                              fontSize: 11.1,
-                              letterSpacing: -0.2,
-                              color: Color(0xFFFFFFFF),
-                            ),
-                          ),
-                          Positioned(
-                            bottom: 0,
-                            child: Container(
-                              height: 13,
-                              child: Text(
-                                '9:27',
-                                style: GoogleFonts.getFont(
-                                  'Roboto Condensed',
-                                  fontWeight: FontWeight.w600,
-                                  fontSize: 11.1,
-                                  letterSpacing: -0.2,
-                                  color: Color(0xFFFFFFFF),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
+                      IconButton(
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
+                        icon: Icon(
+                          Icons.arrow_back_rounded,
+                          color: Colors.white,
+                          size: 40,
+                        ),
                       ),
                       Container(
-                        margin: EdgeInsets.fromLTRB(0, 2.2, 0, 1.9),
-                        child: SizedBox(
-                          width: 49.8,
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Container(
-                                margin: EdgeInsets.fromLTRB(0, 0.5, 3.7, 0.5),
-                                child: SizedBox(
-                                  width: 12.6,
-                                  height: 7.9,
-                                  child: Stack(
-                                    children: [
-                                      SizedBox(
-                                        width: 12.6,
-                                        height: 7.9,
-                                        child: SvgPicture.asset(
-                                          'assets/vectors/cellular_connection_28_x2.svg',
-                                        ),
-                                      ),
-                                      Positioned(
-                                        bottom: 0,
-                                        child: Container(
-                                          width: 12.6,
-                                          height: 7.9,
-                                          child: SizedBox(
-                                            width: 12.6,
-                                            height: 7.9,
-                                            child: SvgPicture.asset(
-                                              'assets/vectors/cellular_connection_5_x2.svg',
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                              Container(
-                                margin: EdgeInsets.fromLTRB(0, 0.2, 3.7, 0.5),
-                                child: SizedBox(
-                                  width: 11.3,
-                                  height: 8.1,
-                                  child: Stack(
-                                    children: [
-                                      SizedBox(
-                                        width: 11.3,
-                                        height: 8.1,
-                                        child: SvgPicture.asset(
-                                          'assets/vectors/wifi_20_x2.svg',
-                                        ),
-                                      ),
-                                      Positioned(
-                                        bottom: 0,
-                                        child: Container(
-                                          width: 11.3,
-                                          height: 8.1,
-                                          child: SizedBox(
-                                            width: 11.3,
-                                            height: 8.1,
-                                            child: SvgPicture.asset(
-                                              'assets/vectors/wifi_3_x2.svg',
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                              SizedBox(
-                                width: 18.5,
-                                height: 8.9,
-                                child: SvgPicture.asset(
-                                  'assets/vectors/container_x2.svg',
-                                ),
-                              ),
-                            ],
+                        margin: EdgeInsets.only(left: 30),
+                        child: Text(
+                          "Update Destination",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 30,
                           ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  margin: EdgeInsets.fromLTRB(23, 0, 21, 79),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Container(
-                        decoration: BoxDecoration(
-                          color: Color(0xFFFFFFFF),
-                          borderRadius: BorderRadius.circular(22),
-                        ),
-                        child: SizedBox(
-                          width: 135.3,
-                          child: Container(
-                            padding: EdgeInsets.fromLTRB(4.6, 4, 0, 3),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Container(
-                                  margin: EdgeInsets.fromLTRB(0, 0, 6.9, 0),
-                                  child: SizedBox(
-                                    width: 42.4,
-                                    height: 37,
-                                    child: SvgPicture.asset(
-                                      'assets/vectors/group_301_x2.svg',
-                                    ),
-                                  ),
-                                ),
-                                Container(
-                                  margin: EdgeInsets.fromLTRB(0, 10, 0, 11),
-                                  child: Text(
-                                    'Leonardo',
-                                    style: GoogleFonts.getFont(
-                                      'Roboto Condensed',
-                                      fontWeight: FontWeight.w500,
-                                      fontSize: 14,
-                                      height: 1.1,
-                                      color: Color(0xFF1B1E28),
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ),
-                      SizedBox(
-                        width: 50.4,
-                        height: 44,
-                        child: SvgPicture.asset(
-                          'assets/vectors/menu_icon_1_x2.svg',
+                          textAlign: TextAlign.center,
                         ),
                       ),
                     ],
@@ -253,6 +107,7 @@ class AddDestination extends StatelessWidget {
                         width: 340,
                         height: 65,
                         child: TextFormField(
+                          initialValue: destination,
                           onChanged: (value) => destination = value,
                           decoration: InputDecoration(
                             border: OutlineInputBorder(
@@ -270,6 +125,7 @@ class AddDestination extends StatelessWidget {
                         width: 340,
                         height: 65,
                         child: TextFormField(
+                          initialValue: description,
                           onChanged: (value) => description = value,
                           decoration: InputDecoration(
                             border: OutlineInputBorder(
@@ -287,6 +143,7 @@ class AddDestination extends StatelessWidget {
                         width: 340,
                         height: 65,
                         child: TextFormField(
+                          initialValue: location,
                           onChanged: (value) => location = value,
                           decoration: InputDecoration(
                             border: OutlineInputBorder(
@@ -325,7 +182,7 @@ class AddDestination extends StatelessWidget {
                             ),
                           ),
                           child: Text(
-                            'Add Date',
+                            'Update Date',
                             style: GoogleFonts.getFont(
                               'Roboto Condensed',
                               fontWeight: FontWeight.w600,
@@ -347,6 +204,7 @@ class AddDestination extends StatelessWidget {
                           !location.isEmpty &&
                           selectDate != null) {
                         Map<String, String> temp = {
+                          "id": snapshot['id'].toString(),
                           "nama_destinasi": destination,
                           "deskripsi": description,
                           "lokasi": location,
@@ -354,7 +212,8 @@ class AddDestination extends StatelessWidget {
                               DateFormat("yyyy-MM-dd").format(selectDate),
                           "gambar": "",
                         };
-                        addDestination(temp);
+                        upDestination(temp);
+                        Navigator.pop(context);
                       }
                     },
                     style: ButtonStyle(
